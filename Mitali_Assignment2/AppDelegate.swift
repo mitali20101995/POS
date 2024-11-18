@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Mitali_Assignment2
 //
-//  Created by Siddharth Trivedi on 2024-11-15.
+//  Created by Mitali Ahir on 2024-11-15.
 //
 
 import UIKit

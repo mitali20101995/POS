@@ -9,10 +9,20 @@ struct Product{
     
     let name: String
     let price: Double
-    let quantity: Int
+    var quantity: Int
     
-    func totalPrice() -> Double{
-        return price * Double(quantity)
+    //calculate total price when user indicates desired quantity for a product
+    func totalPrice(desiredQTY: Int) -> Double{
+        return price * Double(desiredQTY)
     }
+    
+    func isAvailable(desiredQTY: Int) -> Bool{
+        return quantity >= desiredQTY && desiredQTY > 0
+    }
+    
+    //update the quantity of product to showcase the change when user bought desired qty of that product
+    mutating func updateQTY(desiredQTY: Int){
+        quantity -= desiredQTY
+    }
+    
 }
-var sampleProducts: [Product] = [Product(name: "Computers", price: 3000.67, quantity: 32), Product(name: "Mobile Phones", price:1777.67, quantity: 12), Product(name: "Laptops", price: 5000.67, quantity:20)]
